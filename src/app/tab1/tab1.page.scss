@@ -1,0 +1,20 @@
+.team-link{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.team-icon {
+    width: 37px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+  }
+  

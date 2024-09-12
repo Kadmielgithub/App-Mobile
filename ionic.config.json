@@ -1,0 +1,7 @@
+{
+  "name": "fut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

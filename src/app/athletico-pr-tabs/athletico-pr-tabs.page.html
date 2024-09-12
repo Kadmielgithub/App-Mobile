@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Athletico-PR</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="elenco">
+        <ion-label>Elenco</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="historia">
+        <ion-label>História</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="transferencias">
+        <ion-label>Transferências</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+    <ion-router-outlet></ion-router-outlet>
+  </ion-tabs>
+</ion-content>
+
+
