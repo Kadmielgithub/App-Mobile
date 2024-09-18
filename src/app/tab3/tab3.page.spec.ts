@@ -1,21 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { tab3 } from './tab3.page';
 
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
-import { Tab3Page } from './tab3.page';
-
-describe('Tab3Page', () => {
-  let component: Tab3Page;
-  let fixture: ComponentFixture<Tab3Page>;
+describe('tab3page', () => {
+  let component: tab3;
+  let fixture: ComponentFixture<tab3>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Tab3Page],
-      imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
-    }).compileComponents();
+      declarations: [ tab3 ]
+    })
+    .compileComponents();
 
-    fixture = TestBed.createComponent(Tab3Page);
+    fixture = TestBed.createComponent(tab3);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,3 +20,4 @@ describe('Tab3Page', () => {
     expect(component).toBeTruthy();
   });
 });
+

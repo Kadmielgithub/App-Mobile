@@ -1,17 +1,64 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title>Configurações</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <form id="dataForm" (submit)="saveData()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" required [(ngModel)]="user.name"></ion-input>
+    </ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" required [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input type="tel" required [(ngModel)]="user.phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]="user.address"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="dark" type="submit">Salvar Dados</ion-button>
+  </form>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Trocar Senha</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form id="passwordForm" (submit)="changePassword()">
+        <ion-item>
+          <ion-label position="floating">Senha Atual</ion-label>
+          <ion-input type="password" required [(ngModel)]="currentPassword"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Nova Senha</ion-label>
+          <ion-input #newPasswordInput type="password" required [(ngModel)]="newPassword"></ion-input>
+          <ion-button slot="end" (click)="togglePasswordVisibility(newPasswordInput)">
+            <ion-icon name="eye" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Confirmar Nova Senha</ion-label>
+          <ion-input #confirmPasswordInput type="password" required [(ngModel)]="confirmPassword"></ion-input>
+          <ion-button slot="end" (click)="togglePasswordVisibility(confirmPasswordInput)">
+            <ion-icon name="eye" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-button expand="full" color="dark" type="submit">Trocar Senha</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
